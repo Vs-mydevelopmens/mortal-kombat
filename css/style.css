@@ -425,6 +425,20 @@ body.ie ._ibg img {
           align-items: center;
 }
 
+.fullscreen::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#010202), color-stop(60%, #010202), color-stop(90%, rgba(1, 2, 2, 0.2)));
+  background: -o-linear-gradient(left, #010202 0%, #010202 60%, rgba(1, 2, 2, 0.2) 90%);
+  background: linear-gradient(90deg, #010202 0%, #010202 60%, rgba(1, 2, 2, 0.2) 90%);
+  display: block;
+  z-index: 2;
+}
+
 .fullscreen__video {
   position: absolute;
   content: "";
@@ -434,19 +448,6 @@ body.ie ._ibg img {
   right: 0;
   display: block;
   z-index: 2;
-}
-
-.fullscreen__video::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#010202), color-stop(30%, #010202), color-stop(90%, rgba(1, 2, 2, 0.2)));
-  background: -o-linear-gradient(left, #010202 0%, #010202 30%, rgba(1, 2, 2, 0.2) 90%);
-  background: linear-gradient(90deg, #010202 0%, #010202 30%, rgba(1, 2, 2, 0.2) 90%);
-  display: block;
 }
 
 .fullscreen__video-item {
@@ -462,7 +463,7 @@ body.ie ._ibg img {
   top: 0;
   right: 0;
   display: none;
-  z-index: 2;
+  z-index: 3;
 }
 
 .fullscreen__image::after {
@@ -476,6 +477,7 @@ body.ie ._ibg img {
   background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%);
   background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%);
   display: block;
+  z-index: 4;
 }
 
 .fullscreen-body {
@@ -575,6 +577,12 @@ body.ie ._ibg img {
 
   .fullscreen-body {
     max-width: 970px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .fullscreen__video {
+    width: 49%;
   }
 }
 

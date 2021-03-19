@@ -316,6 +316,7 @@ body.ie ._ibg img {
 .popup__image {
   width: 250px;
   border-radius: 6px;
+  overflow: hidden;
 }
 
 .popup__image img {
